@@ -1,0 +1,22 @@
+.first{
+    background-color: blue;
+    color: white;
+    border: black solid 10px;
+    padding: 20px;
+}
+.second{
+    background-color: yellow;
+    border: black solid 20px;
+    margin-left: 260px;
+
+}
+.third{
+    background-color: red;
+    color: white;
+    border: black solid 10px;
+    margin-left: 500px;
+}
+div{
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,18 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    background-color: navy !important;
+    color: white;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+.links{
+    color: aqua;
+}

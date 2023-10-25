@@ -1,0 +1,12 @@
+<%- include("partials/header"); -%>
+
+<br/><hr/>
+<h1><%= post.title %></h1>
+<p><%= post.content %></p>
+
+<a href="/edit/<%= post.id %>" class="links">Edit</a><br/>
+<a href="/delete/<%= post.id %>" class="links">Delete</a><br/>
+<a href="/home/" class="links"> << Go back Home</a>
+
+
+<%- include("partials/footer"); -%>

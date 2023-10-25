@@ -1,0 +1,36 @@
+<%- include("partials/header"); -%>
+
+    <img src="../images/StarLion.png" alt="lion brewery" />
+    <% if(locals.name) {%>
+        <h2>Hi <%= name %> !!! </h2>
+        <% } %>
+
+            <% posts.forEach((post)=>{ %>
+
+                <div>
+                    <hr />
+                    <h1>
+                        <%=post.title %>
+                    </h1>
+                    <p>
+                        <%= post.content.length> 100 ? post.content.substring(0, 100) + '...' : post.content %>
+                    </p>
+                    <a href="/post/<%= post.id %>" class="links">Read More</a>
+                </div>
+
+                <% }); %>
+
+                    <br />
+                    <hr />
+                    <h2>||| BLOG WRITING |||</h2>
+                    <form method="post" action="/home">
+                        <input type="text" name="Title" placeholder="Your Title Here" />
+                        <br />
+                        <input type="text" name="Body" placeholder="Your Blog Text Here" />
+                        <br />
+                        <input type="submit" />
+
+                    </form>
+
+
+                    <%- include("partials/footer"); -%>

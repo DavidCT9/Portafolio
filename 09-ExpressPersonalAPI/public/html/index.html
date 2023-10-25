@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express test</title>
+</head>
+
+<body>
+<!--  <% if (locals.error) { %>
+        <h3>
+            <%= error %>
+        </h3>
+        <% } %>-->  
+            <form action="/greet" method="get">
+                Register:
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="submit" value="go next">
+            </form>
+
+            <br />
+
+            <div id="greeting" style="display: none;"></div>
+
+<!--       <script>
+                const form = document.querySelector('form');
+                const greetingDiv = document.getElementById('greeting');
+                const names = [];
+
+
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault(); // Prevent the form from submitting
+
+                    const name = document.getElementById('name').value;
+
+                    names.push(name);
+
+                    greetingDiv.style.display = 'block';
+                    greetingDiv.textContent += "Hello,"+ name + "! Welcome! "+<br/>+" ";
+                    
+                });
+            </script>-->   
+
+</body>
+
+</html>

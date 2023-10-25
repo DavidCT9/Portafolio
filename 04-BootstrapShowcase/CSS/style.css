@@ -1,0 +1,58 @@
+nav {
+    background-color: gray;
+}
+
+.img-fluid {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.navbar-toggler-icon {
+    background-image: url('../IMG/dropdown.svg');
+}
+
+.btn-outline-success {
+    color: rgb(246, 241, 241);
+    border-color: rgb(246, 241, 241);
+}
+
+.btn{
+    margin: 1%;
+}
+
+.d-flex{
+    position: sticky;
+    bottom: 0; /* Fija el pie de página en la parte inferior */
+    margin: 1%;
+}
+
+.content{
+    height: 100vh;
+}
+
+#toastImg{
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.pricing{
+    margin: 10%;
+}
+
+
+
+footer{
+    background:#373a3c !important ;
+    padding: 1rem!important;
+    position: relative;
+    bottom: 0vh;
+    text-align: center;
+    color: azure;
+  
+    
+}
+
+.toast-container{
+    z-index: 1050;
+}
+

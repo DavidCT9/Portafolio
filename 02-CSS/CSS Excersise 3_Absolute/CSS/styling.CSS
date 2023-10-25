@@ -1,0 +1,30 @@
+div{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+
+}
+
+.first{
+    background-color: red;
+    color: white;
+    top: 400px;
+    right: 800px;
+
+
+}
+
+.second{
+    background-color: blue;
+    color: white;
+    top: 200px;
+    right: 1000px;
+}
+
+.third{
+    background-color: yellow;
+    top:0px;
+    right: 1200px;
+
+
+}

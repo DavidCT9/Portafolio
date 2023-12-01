@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather report</title>
+</head>
+
+<body style="background-color: lightgray;">
+    <ul>
+        <li>
+            <h3> <b> Tempeture: </b>
+                <%= tempetureCelsius %>
+                    °C
+            </h3>
+        </li>
+        <li>
+            <h3> <b>Description:</b>
+                <%= desc %>
+            </h3>
+        </li>
+    </ul>
+    <img src="<%= img %>"  alt="Weather image"/><br>
+
+    <a href="/" alt="Home page " style="width: 5dvw; height: auto;">
+        &nbsp; &emsp; << &nbsp; Search another city </a>  <!--REDIRECT USING ENDPINTS not files-->
+
+
+</body>
+
+</html>

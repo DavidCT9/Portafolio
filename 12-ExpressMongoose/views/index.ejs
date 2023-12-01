@@ -1,0 +1,142 @@
+<%- include("partials/header"); -%>
+
+    <img src="../images/StarLion.png" alt="lion brewery" />
+    <h1>Welcome to my F1 DB</h1>
+    <form action="/driver" method="post">
+        <h2>Driver information</h2>
+        <input type="text" name="num" id="num" placeholder="Number" />
+        <input type="text" name="code" id="code" placeholder="Code" />
+        <input type="text" name="forename" id="name" placeholder="Name" />
+        <input type="text" name="surname" id="lname" placeholder="Last name" />
+        <br />
+        <label for="dob">Date of birth: </label>
+        <input type="date" name="dob" id="dob" />
+        <label for="url">Biography URL: </label>
+        <input type="url" name="url" id="url" />
+        <br />
+        <label for="nation">Nationality: </label>
+        <select name="nationality" id="nation">
+            <% countries.forEach((country)=> { %>
+                <option value="<%= country.code %>">
+                    <%= country.label %>
+                </option>
+                <% }) %>
+
+        </select>
+        <label for="team">Team: </label>
+        <select name="team" id="team">
+
+            <% teams.forEach((team)=> { %>
+                <option value="<%= team.code %>">
+                    <%= team.label %>
+                </option>
+                <% }) %>
+
+        </select>
+        <p> <input type="submit" /> </p>
+    </form>
+
+
+<!--   <% drivers.forEach(driver=> { %>
+
+        <form action="/driver/<%= driver._id %>" method="post" id="myForm">
+            <input name="forename" value="<%= driver.forename %>" />
+            <input name="surname" value="<%= driver.surname %>" />
+
+            <button type="submit">Save</button>
+
+        </form>
+
+        <% }) %> --> 
+
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <b>F1 DRIVERS</b>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+
+                            <% drivers.forEach(driver=> { %>
+
+                                <div class="list-group">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">
+                                            <form action="/driver/<%= driver._id %>" method="post" id="myForm">
+                                                Name: <input name="forename" value="<%= driver.forename %>" /><br>
+
+                                        </h5>
+                                        <small>F1 DRIVERS</small>
+                                    </div>
+                                    <p class="mb-1">
+                                        Surname: &nbsp;<input name="surname" value="<%= driver.surname %>" />&nbsp;
+                                        Num:&nbsp; <input type="number" name="num" value="<%= driver.num %>" />&nbsp;
+                                        Code:&nbsp; <input name="code" value="<%= driver.code %>" />&nbsp;
+                                        Date of birth: &nbsp;<input type="date" name="dob" &nbsp;
+                                            value="<%= driver.dob %>" />&nbsp;
+                                        <br>Biography URL: &nbsp; <input type="url" name="url"
+                                            value="<%= driver.url %>" />&nbsp;
+                                        Nationality: &nbsp; <select name="nationality" id="nation">
+                                            <% countries.forEach((country)=> { %>
+                                                <option value="<%= country.code %>">
+                                                    <%= country.label %>
+                                                </option>
+                                                <% }) %>
+
+                                        </select>
+                                        <label for="team">&nbsp; Team: </label>
+                                        <select name="team" id="team">
+
+                                            <% teams.forEach((team)=> { %>
+                                                <option value="<%= team.code %>">
+                                                    <%= team.label %>
+                                                </option>
+                                                <% }) %>
+
+                                        </select>
+
+
+
+                                        <br><br>&nbsp; <button type="submit">Save</button>
+                                        <hr><br>
+                                    </p>
+                                    </form>
+
+                                    </a>
+                                </div>
+
+                                <% }) %>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <b>F1 TEAMS</b>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+                            <% teams.forEach((team)=> { %>
+                                <h5 value="<%= team.code %>">
+                                    <%= team.label %>
+                                </h5>
+                                <% }) %>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <%-include("partials/footer"); -%>

@@ -4,19 +4,25 @@
   text-align: center;
 }
 
+body {
+  background-color: lightgrey;
+}
+
 .dice {
   text-align: center;
   display: inline-block;
-
+  font-family: 'Indie Flower', cursive;
 }
 
 h1 {
   margin: 30px;
   font-size: 8rem;
+  font-family: 'Lobster', cursive;
 }
 
 p {
   font-size: 2rem;
+  color: darkslategrey;
 }
 
 img {
